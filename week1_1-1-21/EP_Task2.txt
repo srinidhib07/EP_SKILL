@@ -1,0 +1,69 @@
+<html>
+<head>
+<script>
+function validate()
+{
+var name = document.f1.name.value;
+var id = document.f1.id.value;
+var email = document.f1.email.value;
+var at=email.indexOf('@');
+var dot=email.lastIndexOf('.');
+
+if(name == null || name == "")
+{alert("Name cannot be empty");}
+
+if(name.length<8 && name.length != 0)
+{alert("Name should be min of 8 characters");}
+
+if(id == null || id == "")
+{alert("Reg no cannot be empty");}
+
+if(id.length < 8 && name.length != 0)
+{alert("Reg no should be min of 8 characters");}
+
+if(email == null || email == "")
+{alert("Email cannot be empty");}
+
+if(email.length != 0)
+{
+if(parseInt(dot)-parseInt(at)<1)
+{alert("Enter valid email id");}
+
+if(email.length - parseInt(at) < 2)
+{alert("Enter valid email id");}
+}
+if((f1.game[0].checked == false) &&(f1.game[1].checked == false) && (f1.game[2].checked == false))
+{alert("Please choose a favorite game");}
+
+if ( ( f1.gender[0].checked == false ) && ( f1.gender[1].checked == false ) )
+{
+alert ( "Please choose your Gender: Male or Female" );
+
+}
+
+}
+
+</script>
+<h1 class = "a">Registration Page</h1>
+<title>Task 2</title>
+<body>
+<form name="f1" onsubmit="validate()">
+<table align = "center">
+<tr><td>Name:</td><td> <input type = "text" name = "name"></td></tr>
+
+<tr><td>RegistrationId:</td><td> <input type = "text" name = "id"></td></tr>
+
+<tr><td>EmailId:</td><td> <input type = "text" name = "email"></td></tr>
+
+<tr><td>Favorite Game:</td><td> Cricket <input type = "checkbox" name = "game">Football <input type = "checkbox" name = "game">Chess <input type = "checkbox" name = "game"></td></tr>
+
+
+<tr><td>Gender: </td><td>Male <input type = "radio" name = "gender">Female<input type = "radio" name = "gender"></td></tr>
+<br>
+<tr><td><input type = "submit" value = "register" > </td></tr>
+</table>
+
+
+</form> 
+</body>
+</html>
