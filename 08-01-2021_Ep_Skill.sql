@@ -1,0 +1,27 @@
+create database Ep;
+use Ep;
+create table EmployeeTable(Emp_id int primary key, E_Name varchar(20), Designation varchar(20), Salary int);
+insert into EmployeeTable values(121, 'Sridhar', 'President', 200000);
+insert into EmployeeTable values(122, 'Ravi', 'Manager', 100000);
+insert into EmployeeTable values(123, 'Shreya', 'Manager', 100000);
+insert into EmployeeTable values(124, 'Rakesh', 'Manager', 100000);
+insert into EmployeeTable values(125, 'Priya', 'Manager', 100000);
+insert into EmployeeTable values(126, 'Ram', 'Analyst', 60000);
+select * from EmployeeTable;
+delete from EmployeeTable where Emp_id = 122;
+select * from EmployeeTable;
+update EmployeeTable set Emp_id = 127 where Emp_id = 126;
+select * from EmployeeTable;
+alter table EmployeeTable
+add Age int;
+select * from EmployeeTable;
+insert into EmployeeTable(Emp_id,Age) values(126,28);
+insert into EmployeeTable(Emp_id, Age) values(128,45);
+select * from EmployeeTable;
+update EmployeeTable set E_name = 'Sachin' where Emp_id = 126;
+update EmployeeTable set Designation='Analyst', Salary = 65000 where Emp_id = 126;
+update EmployeeTable set E_name='Deepti', Designation='Analyst',Salary=60000 where Emp_id=128;
+update EmployeeTable set Age = 38 where Emp_id = 121;
+update EmployeeTable set Age= 31 where Emp_id=123;
+update EmployeeTable set Age= 37 where Emp_id=124;
+select * from EmployeeTable;
